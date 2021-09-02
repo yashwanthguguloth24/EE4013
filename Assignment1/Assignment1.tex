@@ -1,0 +1,236 @@
+
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+% \providecommand{\abs}[1]{\left\vert#1\right\vert}
+% \providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+% \providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+% %\providecommand{\norm}[1]{\lVert#1\rVert}
+% \providecommand{\mtx}[1]{\mathbf{#1}}
+% \providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}					
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{EE4013 Assignment 1}
+\author{Yashwanth G - EE18BTECH11007}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+Download all Codes from 
+%
+\begin{lstlisting}
+https://github.com/yashwanthguguloth24/EE4013/tree/master/Assignment1/codes
+\end{lstlisting}
+Download all latex-tikz codes from 
+\begin{lstlisting}
+https://github.com/yashwanthguguloth24/EE4013/tree/master/Assignment1/Assignment1.tex
+\end{lstlisting}
+\section{Problem}
+Consider the following multi-threaded code segment (in a mix of C and psuedo-code), invoked by two processes P1 and P2, and each of the processes spawns two threads T1 and T2:
+\begin{lstlisting}
+int x = 0; // global
+lock L1; // global
+main(){
+ create a thread to execute foo(); // Thread T1
+ create a thread to execute foo(); // Thread T2
+ wait for the two threads to finish execution;
+ print(x);}
+
+foo() {
+ int y = 0;
+ Acquire L1;
+ x = x + 1;
+ y = y + 1;
+ Release L1;
+ print(y);}
+\end{lstlisting}
+Which of the following statement(s) is/are correct?
+\newline
+(A) Both P1 and P2 will print the value of x as 2.
+\newline
+(B) At least one of P1 and P2 will print the value of x as 4.
+\newline
+(C) At least one of the threads will print the value of y as 2.
+\newline
+(D) Both T1 and T2, in both the processes will print the value of y as 1.
+
+\section{Solution}
+\textbf{Both Options (A) and (D) are Correct.}
+\newline
+In the question it is given that the code segment is invoked by 2 processes(a program in execution).
+\newline
+\textbf{For the Process $P_{1}$:}
+\newline
+1.Two threads are created in the main let they be $T_{11}$ and $T_{12}$.
+\newline
+2.Both the threads executes the foo() function and they don't wait for each other.Due to the locking mechanism in the foo() function, as soon as one of the threads enters the foo() it locks the function and doesn't allow other thread to execute simultaneously.
+\newline
+3.Let $T_{11}$ be the first thread to enter foo(),then it locks the function and increments \textbf{x to 1}, y being the local variable it prints \textbf{y as 1} and releases the lock.
+\newline
+4.As soon as the $T_{11}$ releases the lock, $T_{12}$ executes foo() by locking, incrementing \textbf{x to 2} (since x is global variable), printing  \textbf{y as 1}(local variable), unlocking.
+\newline
+5.Finally, as soon as both the threads finishes their execution, \textbf{x} will be printed as \textbf{2}.
+\newline
+\textbf{For the Process $P_{2}$:}
+\newline
+The execution for $P_{2}$ will be same as $P_{1}$ because both the processes have different stack space, heap, text, data and also there is no part of the code which has mechanisms like shared memory,files etc.. so,both the processes will run independently.
+ 
+\newline
+
+\textbf{Options:}
+\newline
+(A) \textbf{True}, because both the processes being independent have their own copy of variables so,they finally print x as 2.
+\newline
+(B) \textbf{False}, as both proccess print x as 2, none of them prints x as 4.
+\newline
+(C) \textbf{False}, since y is an local variable so both the threads have their own copy of variable y, which they would increment to 1 and print them as 1.
+\newline
+(D) \textbf{True}, both threads will print x as 1 as mentioned above in (C) option.
+
+\section{Implementation}
+As the code-segment was invoked by 2 processes, the following C code 
+\newline
+\begin{lstlisting}
+https://github.com/yashwanthguguloth24/EE4013/tree/master/Assignment1/codes/invoke.c
+\end{lstlisting}
+
+invokes the following C code(multithreading.c) with two processes(creating using fork()) via executable file, which represents the given code-segment with multiple threads
+
+\begin{lstlisting}
+https://github.com/yashwanthguguloth24/EE4013/tree/master/Assignment1/codes/multithreading.c
+\end{lstlisting}
+\newline
+The code invoke.c(creating multiple processes) produces the following output:
+\begin{lstlisting}
+**********************************
+Executing Process P1.... 
+value of y is 1
+value of y is 1
+value of x is 2
+Finished executing process P1. 
+**********************************
+Executing Process P2.... 
+value of y is 1
+value of y is 1
+value of x is 2
+Finished executing process P2.
+**********************************
+\end{lstlisting}
+\newline
+Finally, verfying the output with given options,gives \textbf{(A)} and \textbf{(D)} as correct answer. 
+\end{document}
+
